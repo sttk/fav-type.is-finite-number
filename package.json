@@ -14,14 +14,14 @@
     "web:build-src": "browserify index.js --standalone fav.type.is-finite-number -o web/fav.type.is-finite-number.js && cd web && uglifyjs fav.type.is-finite-number.js --compress --mangle -o fav.type.is-finite-number.min.js --source-map url=fav.type.is-finite-number.min.js.map",
     "web:build-test": "node tool/mktest.js",
     "chrome:install": "npm i --no-save mocha-chrome",
-    "chrome:test": "mocha-chrome test/web/fav-type.is-finite-number.test.html",
+    "chrome:test": "mocha-chrome test/web/browser-test.html",
     "phantom:install": "npm i --no-save phantomjs-prebuilt mocha-phantomjs",
-    "phantom:test": "mocha-phantomjs -p node_modules/.bin/phantomjs test/web/fav-type.is-finite-number.test.html",
+    "phantom:test": "mocha-phantomjs -p node_modules/.bin/phantomjs test/web/browser-test.html",
     "build": "npm run lint && npm run coverage && npm run web:build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sttk/fav-type.git"
+    "url": "git+https://github.com/sttk/fav-type.is-finite-number.git"
   },
   "keywords": [
     "number",
@@ -36,9 +36,9 @@
   "author": "Takayuki Sato",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sttk/fav-type/issues"
+    "url": "https://github.com/sttk/fav-type.is-finite-number/issues"
   },
-  "homepage": "https://github.com/sttk/fav-type#readme",
+  "homepage": "https://github.com/sttk/fav-type.is-finite-number#readme",
   "devDependencies": {
     "browserify": "^14.4.0",
     "eslint": "^4.8.0",

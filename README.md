@@ -1,10 +1,10 @@
-# [@fav/type.is-finite-number][repo-url] [![NPM version][npm-img]][npm-url] [![MIT License][mit-img]][mit-url] [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url]
+# [@fav/type.is-finite-number][repo-url] [![NPM][npm-img]][npm-url] [![MIT License][mit-img]][mit-url] [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url]
 
 Checks whether a value is a finite number or not.
 
 > "fav" is an abbreviation of "favorite" and also the acronym of "for all versions".
 > This package is intended to support all Node.js versions and many browsers as possible.
-> At least, this package supports NodeJS >= v0.10 and major Web browsers: Chrome, Firefox, IE11, Edge, Vivaldi and Safari.
+> At least, this package supports Node.js >= v0.10 and major Web browsers: Chrome, Firefox, IE11, Edge, Vivaldi and Safari.
 
 ## Install
 
@@ -14,9 +14,11 @@ To install from npm:
 $ npm install --save @fav/type.is-finite-number
 ```
 
-*When you use npm < 2.7.0 which is not support scoped package, you should install [fav-type][repo-url] from github.*
+Or from github (when npm < 2.7.0 which is not support scoped package):
 
-*When you want to use this on a Web browser, you can install [@fav/type][main-url] from npm and use `fav.type.isFiniteNumber` in it.*
+```sh
+$ npm install --save sttk/fav-type.is-finite-number#unscoped
+```
 
 ## Usage
 
@@ -28,6 +30,23 @@ isFiniteNumber(123); // => true
 isFiniteNumber(4.56); // => true
 isFiniteNumber(Infinity); // => false
 isFiniteNumber(NaN); // => false
+```
+
+Or when installing `fav-type.is-finite-number` from github:
+
+```js
+var isFiniteNumber = require('fav-type.is-finite-number');
+isFiniteNumber(123); // => true
+```
+
+For Web browsers:
+
+```html
+<script src="fav.type.is-finite-number.min.js"></script>
+<script>
+var isFiniteNumber = fav.type.isFiniteNumber;
+isFiniteNumber(123); // => true
+</script>
 ```
 
 ## API
@@ -47,6 +66,42 @@ Checks if *value* is a number, which is neither a positive/negative infinity nor
 True, if *value* is a finite number.
 
 **Type:** boolean
+
+
+## Checked                                                                      
+
+### Node.js (4〜8)
+
+| Platform  |   4    |   5    |   6    |   7    |   8    |
+|:---------:|:------:|:------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+
+### io.js (1〜3)
+
+| Platform  |   1    |   2    |   3    |
+|:---------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|
+
+### Node.js (〜0.12)
+
+| Platform  |  0.7   |  0.8   |  0.9   |  0.10  |  0.11  |  0.12  |
+|:---------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| macOS     |        |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |        |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+
+### Web browsers
+
+| Platform  | Chrome | Firefox | Vivaldi | Safari |  Edge  | IE11   |
+|:---------:|:------:|:-------:|:-------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef; |&#x25ef; |&#x25ef;|   --   |   --   |
+| Windows10 |&#x25ef;|&#x25ef; |&#x25ef; |   --   |&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef; |&#x25ef; |   --   |   --   |   --   |
+
 
 ## License
 
