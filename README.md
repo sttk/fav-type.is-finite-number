@@ -27,6 +27,11 @@ isFiniteNumber(123); // => true
 isFiniteNumber(4.56); // => true
 isFiniteNumber(Infinity); // => false
 isFiniteNumber(NaN); // => false
+
+isFiniteNumber.not(123); // => false
+isFiniteNumber.not(4.56); // => false
+isFiniteNumber.not(Infinity); // => true
+isFiniteNumber.not(NaN); // => true
 ```
 
 For Web browsers:
@@ -36,6 +41,7 @@ For Web browsers:
 <script>
 var isFiniteNumber = fav.type.isFiniteNumber;
 isFiniteNumber(123); // => true
+isFiniteNumber.not(123); // => false
 </script>
 ```
 
@@ -55,6 +61,25 @@ Checks if *value* is a number, which is neither a positive/negative infinity nor
 #### Return:
 
 True, if *value* is a finite number.
+
+**Type:** boolean
+
+
+### <u>isFiniteNumber.not(value) : boolean</u>
+
+Checks if *value* is not a finite number.
+
+This function always returns a negative boolean of `isFiniteNumber(value)`.
+
+#### Parameter:
+
+| Parameter |  Type  | Description              |
+|-----------|:------:|--------------------------|
+| value     | *any*  | The value to be checked. |
+
+#### Return:
+
+True, if *value* is not a finite number.
 
 **Type:** boolean
 

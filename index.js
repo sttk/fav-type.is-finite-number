@@ -10,4 +10,13 @@ function isFiniteNumber(value) {
   return false;
 }
 
+function isNotFiniteNumber(value) {
+  return !isFiniteNumber(value);
+}
+
+Object.defineProperty(isFiniteNumber, 'not', {
+  enumerable: true,
+  value: isNotFiniteNumber,
+});
+
 module.exports = isFiniteNumber;
